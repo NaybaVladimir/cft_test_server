@@ -8,14 +8,16 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.net.URISyntaxException;
 import java.util.Arrays;
 import java.util.List;
 
 @Service
 public class ServiceApi {
-    private static final String FILE_DIR = "src\\main\\resources\\tmp\\";
+    private static final String FILE_DIR = "/opt/app/tmp";
 
     public List<File> listOfFiles() {
+
         File dir = new File(FILE_DIR);
         File[] arrFiles = dir.listFiles();
         List<File> lst = Arrays.asList(arrFiles);
